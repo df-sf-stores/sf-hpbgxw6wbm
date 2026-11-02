@@ -4,7 +4,7 @@ The source of the storefront template. When a merchant first picks a template, t
 copies this folder, with the chosen starting theme, into a new store repo through the GitHub
 App. From then on the AI designer writes that store's theme (`src/theme/**`, `content/**`,
 `routes.json`) inside the walls of the storefront ARCHITECTURE §3; everything else here is
-locked.
+locked
 
 Specification: [docs/storefront/ARCHITECTURE.md](../../docs/storefront/ARCHITECTURE.md) and
 [docs/storefront/DESIGN.md](../../docs/storefront/DESIGN.md).
