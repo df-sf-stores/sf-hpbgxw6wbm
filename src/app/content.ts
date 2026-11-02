@@ -10,7 +10,7 @@ const flatten = (value: unknown, prefix: string, into: Words): void => {
 /** content/{language}/{file}.json as flat `file.key` words, the shape the sandbox's bundle hands core (gate/bundle.ts). */
 export const readContent = (root = join(process.cwd(), 'content')): Record<string, Words> =>
   Object.fromEntries(
-    readdirSync(root, { withFileTypes: true })
+    readdirSync(root, { withFileTypes: true })   
       .filter((entry) => entry.isDirectory())
       .map((entry) => {
         const words: Words = {}
