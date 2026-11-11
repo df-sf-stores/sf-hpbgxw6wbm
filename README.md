@@ -4,15 +4,14 @@ The source of the storefront template. When a merchant first picks a template, t
 copies this folder, with the chosen starting theme, into a new store repo through the GitHub
 App. From then on the AI designer writes that store's theme (`src/theme/**`, `content/**`,
 `routes.json`) inside the walls of the storefront ARCHITECTURE §3; everything else here is
-locked
+locked.
 
 Specification: [docs/storefront/ARCHITECTURE.md](../../docs/storefront/ARCHITECTURE.md) and
 [docs/storefront/DESIGN.md](../../docs/storefront/DESIGN.md).
 
 **Status: skeleton.** A static export (`next build`) of one placeholder page: `src/app/` is the
 locked shim layer and `src/theme/` its placeholder. The starting themes are in `themes/{key}/`
-(#486): `baseline` ("Start from scratch", from `designs/DF Storefront Prototype`) and `linen`,
-`concrete`, `bloom`, `circuit`, `market` and `atelier` (from `designs/storefront-lib.js`). Each holds
+(#486): `classic`, `baseline` ("Start from scratch", from `designs/DF Storefront Prototype`) and, until #1218, `market`. Baseline is styled with Tailwind classes, its tokens in `src/theme/styles/theme.css` and its class constants in `src/theme/components/styles/` (#1239). Classic and market keep their CSS Modules: converted, classic's pages went over the 1 MB phone budget. Each holds
 `src/theme/**`, `content/en/*.json`, `routes.json` and `template.json` (the gallery's name, tag,
 description, demo store and the lowest core it runs on, mirrored by the `storefront_template`
 rows), and passes the validator, the preview bundle and the publish gate in
